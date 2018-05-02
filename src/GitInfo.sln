@@ -13,10 +13,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitInfo", "GitInfo", "{66BB
 	ProjectSection(SolutionItems) = preProject
 		GitInfo\build\GitInfo.cache.pp = GitInfo\build\GitInfo.cache.pp
 		GitInfo\build\GitInfo.cs.pp = GitInfo\build\GitInfo.cs.pp
-		GitInfo\GitInfo.nuspec = GitInfo\GitInfo.nuspec
-		GitInfo\build\GitInfo.targets = GitInfo\build\GitInfo.targets
 		GitInfo\build\GitInfo.vb.pp = GitInfo\build\GitInfo.vb.pp
 		GitInfo\build\GitInfo.xbuild = GitInfo\build\GitInfo.xbuild
+		GitInfo\Kingfisher-GitInfo.nuspec = GitInfo\Kingfisher-GitInfo.nuspec
+		GitInfo\build\Kingfisher-GitInfo.targets = GitInfo\build\Kingfisher-GitInfo.targets
 		GitInfo\readme.txt = GitInfo\readme.txt
 	EndProjectSection
 EndProject

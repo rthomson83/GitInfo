@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Kingfisher-GitInfo</id>
+        <version>2.0.20</version>
+        <title>Git and SemVer info for MSBuild/C#/VB</title>
+        <authors>Daniel Cazzulino,Robert Thomson</authors>
+        <licenseUrl>https://github.com/kzu/GitInfo/blob/master/LICENSE</licenseUrl>
+        <projectUrl>https://github.com/kzu/GitInfo</projectUrl>
+        <iconUrl>https://raw.github.com/kzu/GitInfo/master/img/git.png</iconUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <developmentDependency>true</developmentDependency>
+        <description>Exposes the following information for use directly from MSBuild, C# and VB:
+  $(GitBranch), ThisAssembly.Git.Branch
+  $(GitCommit), ThisAssembly.Git.Commit
+  $(GitSha), ThisAssembly.Git.Sha
+  $(GitBaseVersionMajor), ThisAssembly.Git.BaseVersion.Major
+  $(GitBaseVersionMinor), ThisAssembly.Git.BaseVersion.Minor
+  $(GitBaseVersionPatch), ThisAssembly.Git.BaseVersion.Patch
+  $(GitCommits), ThisAssembly.Git.Commits
+  $(GitTag), ThisAssembly.Git.Tag
+  $(GitBaseTag), ThisAssembly.Git.BaseTag
+  $(GitSemVerMajor), ThisAssembly.Git.SemVer.Major
+  $(GitSemVerMinor), ThisAssembly.Git.SemVer.Minor
+  $(GitSemVerPatch), ThisAssembly.Git.SemVer.Patch
+  $(GitSemVerLabel), ThisAssembly.Git.SemVer.Label
+  $(GitSemVerDashLabel), ThisAssembly.Git.SemVer.DashLabel
+  $(GitSemVerSource), ThisAssembly.Git.SemVer.Source
+  $(GitIsDirty), ThisAssembly.Git.IsDirty
+
+The generated code contains only constants, so it can be used to construct your own assembly/file version attributes:
+
+[assembly: AssemblyVersion(ThisAssembly.Git.SemVer.Major + "." + ThisAssembly.Git.SemVer.Minor + ".0")] 
+[assembly: AssemblyInformationalVersion(ThisAssembly.Git.SemVer.Major + "." + 
+	ThisAssembly.Git.SemVer.Minor + "." + ThisAssembly.Git.SemVer.Patch + "-" + 
+	ThisAssembly.Git.Branch + "+" + ThisAssembly.Git.Commit)]</description>
+        <summary>Access commit information from MSBuild and C#/VB code, and infer SemVer from branch, tag or version file in Git repository.</summary>
+        <copyright>Copyright 2015</copyright>
+        <tags>MSBuild Git Versioning GitVersion GitFlowVersion GitFlow GitHubFlow SemVer</tags>
+    </metadata>
+    <files>
+        <file src="build\GitInfo.cache.pp" target="build" />
+        <file src="build\GitInfo.cs.pp" target="build" />
+        <file src="build\Kingfisher-GitInfo.targets" target="build" />
+        <file src="build\GitInfo.vb.pp" target="build" />
+        <file src="build\wslpath.cmd" target="build" />
+        <file src="build\wslrun.cmd" target="build" />
+        <file src="buildMultiTargeting\Kingfisher-GitInfo.targets" target="buildMultiTargeting" />
+        <file src="lib\_._" target="lib\_._" />
+        <file src="readme.txt" target="readme.txt" />
+    </files>
+</package>
